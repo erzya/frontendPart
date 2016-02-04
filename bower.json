@@ -1,0 +1,13 @@
+{
+  "name": "socialProject",
+  "version": "1.0",
+  "description": "blabla",
+  "dependencies": {
+    "angular": "1.4.x",
+    "angular-messages": "1.4.x",
+    "angular-route": "1.4.x",
+    "angular-resource": "1.4.x",
+    "jquery": ">=2.1.1",
+    "bootstrap": ">= 3.0.0"
+  }
+}

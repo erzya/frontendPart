@@ -1,0 +1,9 @@
+{
+  "name": "socialProject",
+  "description": "BlaBla",
+  "version": "1.0.0",
+  "dependencies": {
+    "bower": "^1.4.1",
+    "http-server": "^0.8.0"
+  }
+}
