@@ -8,7 +8,7 @@ SocProjectApp.config(['$routeProvider',function($routeProvider){
 SocProjectApp.controller('SocProjectController',['$scope','$http', function($scope, $http) {
     console.log("GetHome ctr before  !!!!!!!!!!!!");
 
-    $scope.item = {"name":"archObjectType"};
+    $scope.item = {"name":"archObjectTypeList"};
 }]);
 
 /*Factories*/

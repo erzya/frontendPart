@@ -20,14 +20,14 @@
                        </button>
                        <ul class="dropdown-menu"  >
                            <li ng-repeat="archObject in archObjType.archObjects">
-                               <a href="#/cms/archObject/{{archObject.id}}" ng-bind="archObject.name"></a>
+                               <a href="#/cms/archObject/{{archObject.arch_id}}" ng-bind="archObject.name"></a>
                            </li>
                        </ul>
                    </div>
                </td>
                <td>
-                   <a href="#/cms/archObjectType/{{archObjType.id}}" class="btn btn-default" data-toggle="tooltip" title="Редактировать тип объекта"><span class="glyphicon glyphicon-pencil"></span></a>
-                   <a href="#/cms/archObjectType/{{archObjType.id}}" class="btn btn-default" data-toggle="tooltip" title="Удалить тип объекта"><span class="glyphicon glyphicon-remove"></span></a>
+                   <a href="#/cms/archObjectType/del/{{archObjType.objType_id}}" class="btn btn-default" data-toggle="tooltip" title="Редактировать тип объекта"><span class="glyphicon glyphicon-pencil"></span></a>
+                   <a href="#/cms/archObjectType/del/{{archObjType.objType_id}}" class="btn btn-default" data-toggle="tooltip" title="Удалить тип объекта"><span class="glyphicon glyphicon-remove"></span></a>
                </td>
            </tr>
        </tbody>
