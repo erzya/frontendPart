@@ -6,7 +6,7 @@ For running this project you need, download packages (angular, jquery etc) and r
 The instructions below describes how run project.
 
 ### Installation
-1.First at all, check yor version npm
+1.First at all, check your version npm
 ```sh
 npm -v
 ```
