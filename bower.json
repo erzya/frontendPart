@@ -1,7 +1,7 @@
 {
-  "name": "socialProject",
+  "name": "MyCity",
   "version": "1.0",
-  "description": "blabla",
+  "description": "frontend",
   "dependencies": {
     "angular": "1.4.x",
     "angular-messages": "1.4.x",

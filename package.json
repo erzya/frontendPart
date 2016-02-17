@@ -1,6 +1,6 @@
 {
-  "name": "socialProject",
-  "description": "BlaBla",
+  "name": "MyCity",
+  "description": "frontend",
   "version": "1.0.0",
   "dependencies": {
     "bower": "^1.4.1",
