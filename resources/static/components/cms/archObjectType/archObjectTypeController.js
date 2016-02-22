@@ -39,8 +39,8 @@ cms_ArchObjectTypeController.controller('CMS_ArchObjTypeControllerNew',['$scope'
     }
 }]);
 
-cms_ArchObjectTypeController.controller('CMS_ArchObjTypeControllerDel',['$scope','$routeParams','$location',
-    function($scope, $routeParams,$location) {
-        console.log("id    ", $routeParams.objType_id);
-        $location.path('/cms/archObjectTypeList');
+cms_ArchObjectTypeController.controller('CMS_ArchObjTypeControllerDel',['$scope','$stateParams','$location',
+    function($scope, $stateParams,$location) {
+        console.log("id    ", $stateParams.objType_id);
+        //$location.path('/cms/archObjectType/archObjectTypeList');
 }]);

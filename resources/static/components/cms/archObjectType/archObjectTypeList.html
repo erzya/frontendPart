@@ -1,6 +1,6 @@
 <div class="container">
     <h2 ng-bind="tableName"></h2>
-    <a href="#/cms/archObjectType/new" class="btn btn-success">Создать новый тип</a>
+    <a ui-sref="cms.archObjectType.new" class="btn btn-success">Создать новый тип</a>
     <table class="table">
        <thead>
            <tr>
@@ -20,14 +20,14 @@
                        </button>
                        <ul class="dropdown-menu"  >
                            <li ng-repeat="archObject in archObjType.archObjects">
-                               <a href="#/cms/archObject/{{archObject.arch_id}}" ng-bind="archObject.name"></a>
+                               <a ui-sref="cms.archObject.{{archObject.arch_id}}" ng-bind="archObject.name"></a>
                            </li>
                        </ul>
                    </div>
                </td>
                <td>
-                   <a href="#/cms/archObjectType/del/{{archObjType.objType_id}}" class="btn btn-default" data-toggle="tooltip" title="Редактировать тип объекта"><span class="glyphicon glyphicon-pencil"></span></a>
-                   <a href="#/cms/archObjectType/del/{{archObjType.objType_id}}" class="btn btn-default" data-toggle="tooltip" title="Удалить тип объекта"><span class="glyphicon glyphicon-remove"></span></a>
+                   <a ui-sref="cms.archObjectType.del({objType_id : archObjType.objType_id})" class="btn btn-default" data-toggle="tooltip" title="Редактировать тип объекта"><span class="glyphicon glyphicon-pencil"></span></a>
+                   <a ui-sref="cms.archObjectType.del({objType_id : archObjType.objType_id})" class="btn btn-default" data-toggle="tooltip" title="Удалить тип объекта"><span class="glyphicon glyphicon-remove"></span></a>
                </td>
            </tr>
        </tbody>
