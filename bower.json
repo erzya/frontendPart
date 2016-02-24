@@ -8,6 +8,8 @@
     "angular-resource": "1.4.x",
     "jquery": ">=2.1.1",
     "bootstrap": ">= 3.0.0",
-    "angular-ui-router": "0.2.x"
+    "angular-ui-router": "0.2.x",
+    "ui.bootstrap" : "0.14.3",
+    "angular-bootstrap" : "1.1.2"
   }
 }

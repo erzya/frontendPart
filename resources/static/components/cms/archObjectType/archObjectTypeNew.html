@@ -6,7 +6,7 @@
         <!-- NAME -->
         <div ng-class="{ 'has-error' : archTypeObjForm.name.$invalid && !archTypeObjForm.name.$pristine }">
             <label>Наименование</label>
-            <input type="text" name="name" class="form-control" ng-model="archTypeObj.name" required ng-minlength="3" ng-maxlength="80">
+            <input type="text" name="name" class="form-control" ng-model="archTypeObj.name" required ng-minlength="3" ng-maxlength="40">
             <p ng-show="archTypeObjForm.name.$error.minlength" class="help-block">Имя слишком короткое</p>
             <p ng-show="archTypeObjForm.name.$error.maxlength" class="help-block">Имя слишком длинное</p>
             <br/>

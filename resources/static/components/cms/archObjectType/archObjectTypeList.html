@@ -1,6 +1,6 @@
 <div class="container">
     <h2 ng-bind="tableName"></h2>
-    <a ui-sref="cms.archObjectType.new" class="btn btn-success">Создать новый тип</a>
+    <a ui-sref="cms.archObjectType.list.new" class="btn btn-success">Создать новый тип</a>
     <table class="table">
        <thead>
            <tr>
@@ -26,7 +26,7 @@
                    </div>
                </td>
                <td>
-                   <a ui-sref="cms.archObjectType.del({objType_id : archObjType.objType_id})" class="btn btn-default" data-toggle="tooltip" title="Редактировать тип объекта"><span class="glyphicon glyphicon-pencil"></span></a>
+                   <a ui-sref="cms.archObjectType.list.edit({objType_id : archObjType.objType_id})" class="btn btn-default" data-toggle="tooltip" title="Редактировать тип объекта"><span class="glyphicon glyphicon-pencil"></span></a>
                    <a ui-sref="cms.archObjectType.del({objType_id : archObjType.objType_id})" class="btn btn-default" data-toggle="tooltip" title="Удалить тип объекта"><span class="glyphicon glyphicon-remove"></span></a>
                </td>
            </tr>
