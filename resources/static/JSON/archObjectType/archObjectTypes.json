@@ -1,0 +1,57 @@
+[
+    {
+      "objType_id": 1,
+      "name": "Доходный дом",
+      "parent": "квартал",
+      "archObjects": [
+        {
+          "arch_id": 1,
+          "name": "колонна",
+          "description": "высокая",
+          "constructingDate": "10/10/2010"
+        },
+        {
+          "arch_id": 2,
+          "name": "урна",
+          "description": "широкая",
+          "constructingDate": "01/11/2005"
+        },
+        {
+          "arch_id": 3,
+          "name": "балясина",
+          "description": "толстая",
+          "constructingDate": "10/10/1950"
+        }
+      ]
+    },{
+      "objType_id": 2,
+      "name": "Собор",
+      "parent": "квартал",
+      "archObjects": [
+        {
+          "arch_id": 4,
+          "name": "Крест",
+          "description": "православный",
+          "constructingDate": "10/10/2010"
+        },
+        {
+          "arch_id": 5,
+          "name": "орган",
+          "description": "не православный",
+          "constructingDate": "01/11/2005"
+        },
+        {
+          "arch_id": 6,
+          "name": "столб",
+          "description": "стоит",
+          "constructingDate": "10/10/1950"
+        },
+        {
+          "arch_id": 7,
+          "name": "столбик",
+          "description": "лежитстоит",
+          "constructingDate": "10/10/1950"
+        }
+      ]
+    }
+]

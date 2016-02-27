@@ -1,0 +1,25 @@
+{
+  "objType_id": 1,
+  "name": "Доходный дом",
+  "parent": "квартал",
+  "archObjects": [
+    {
+      "arch_id": 1,
+      "name": "колонна",
+      "description": "высокая",
+      "constructingDate": "10/10/2010"
+    },
+    {
+      "arch_id": 2,
+      "name": "урна",
+      "description": "широкая",
+      "constructingDate": "01/11/2005"
+    },
+    {
+      "arch_id": 3,
+      "name": "балясина",
+      "description": "толстая",
+      "constructingDate": "10/10/1950"
+    }
+  ]
+}

@@ -1,8 +1,8 @@
 'use strict';
 
-var app = angular.module('cms_ArchObjectTypeApp',['ui.router', 'ui.bootstrap','cms_ArchObjectTypeController']);
+var ArchObjectTypeApp = angular.module('cms_ArchObjectTypeApp',['ui.router', 'ui.bootstrap','cms_ArchObjectTypeController']);
 
-app.provider('modalState', ['$stateProvider', function($stateProvider) {
+ArchObjectTypeApp.provider('modalState', ['$stateProvider', function($stateProvider) {
     var provider = this;
     this.$get = function() {
         return provider;
@@ -30,7 +30,7 @@ app.provider('modalState', ['$stateProvider', function($stateProvider) {
   }
 ]);
 
-    app.config(['$stateProvider', 'modalStateProvider',  function($stateProvider, modalStateProvider){
+ArchObjectTypeApp.config(['$stateProvider', 'modalStateProvider',  function($stateProvider, modalStateProvider){
         $stateProvider
             .state('cms.archObjectType', {
                 url: '/archObjectType',
@@ -41,11 +41,6 @@ app.provider('modalState', ['$stateProvider', function($stateProvider) {
                 templateUrl: '/resources/static/components/cms/archObjectType/archObjectTypeList.html',
                 controller : 'CMS_ArchObjTypeControllerList'
             })
-            /*.state('cms.archObjectType.new', {
-                url: '/new',
-                templateUrl: '/resources/static/components/cms/archObjectType/archObjectTypeNew.html',
-                controller : 'CMS_ArchObjTypeControllerNew'
-            })*/
             .state('cms.archObjectType.del', {
                 url: '/del/:objType_id',
                 templateUrl: '/resources/static/components/cms/archObjectType/archObjectTypeList.html',
@@ -68,24 +63,15 @@ app.provider('modalState', ['$stateProvider', function($stateProvider) {
     	      roles: []
     	    }             
 	 });
-
-
-        /*$routeProvider
-            .when('/cms/archObjectTypeList',
-            {
-                templateUrl:'/resources/static/components/cms/archObjectType/archObjectTypeList.html',
-                controller : 'CMS_ArchObjTypeControllerList'
-            })
-            .when('/cms/archObjectType/new',
-            {
-                templateUrl:'/resources/static/components/cms/archObjectType/archObjectTypeNew.html',
-                controller : 'CMS_ArchObjTypeControllerNew'
-            })
-            .when('/cms/archObjectType/del/:objType_id',
-            {
-                templateUrl:'/resources/static/components/cms/archObjectType/archObjectTypeList.html',
-                controller : 'CMS_ArchObjTypeControllerDel'
-            })*/
-        }
-    ]);
-
+}]);
+/*Factories*/
+/*----------------ArchObjectType------------------*/
+ArchObjectTypeApp.factory('ArchObjectTypeFactory',['$resource',function($resource){
+    console.log("Before Return    Arch");
+    return $resource('resources/static/JSON/archObjectType/:action/:objType_id.:format',{
+        objType_id:'archObjectTypes',
+        format: 'json'
+    },{
+        delete:{method:'POST',params:{action:'del',objType_id:'@objType_id'}},
+    });
+}]);
