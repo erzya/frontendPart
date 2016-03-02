@@ -1,16 +1,16 @@
 'use strict';
 
-var CmsApp = angular.module('cmsApp',['ui.router','cms_ArchObjectTypeApp'])
+var AdminApp = angular.module('adminApp',['ui.router','admin_ObjectTypeApp'])
     .config(['$stateProvider',function($stateProvider){
-        $stateProvider.state('cms', {
-            url: '/cms',
+        $stateProvider.state('admin', {
+            url: '/admin',
             template: '<ui-view></ui-view>'
         });
     }]
 );
 /*Temp location Factories*/
 /*----------------ArchObject------------------*/
-CmsApp .factory('ArchObjectFactory',['$resource',function($resource){
+AdminApp .factory('ArchObjectFactory',['$resource',function($resource){
     console.log("Before Return    Arch");
     return $resource('resources/static/JSON/archObject/:action/:arch_id.:format',{
         arch_id:'archObjects',

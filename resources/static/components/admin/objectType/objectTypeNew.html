@@ -1,0 +1,37 @@
+<div class="modal-body">
+    <h2 ng-bind="tableName"/>
+    <!-- pass in the variable if our form is valid or invalid -->
+    <form name="typeObjForm" ng-submit="saveObjType()" novalidate>
+
+        <!-- NAME -->
+        <div ng-class="{ 'has-error' : typeObjForm.name.$invalid && !typeObjForm.name.$pristine }">
+            <label>Наименование</label>
+            <input type="text" name="name" class="form-control" ng-model="typeObj.name" required ng-minlength="3" ng-maxlength="40">
+            <p ng-show="typeObjForm.name.$error.minlength" class="help-block">Имя слишком короткое</p>
+            <p ng-show="typeObjForm.name.$error.maxlength" class="help-block">Имя слишком длинное</p>
+            <br/>
+        </div>
+
+        <!-- Parent Type-->
+        <div ng-class="{ 'has-error' : typeObjForm.parent.$invalid && typeObjForm.parent.$touched }">
+            <label>Тип объекта</label>
+            <select class="form-control" name="parent" ng-model="typeObj.parent" ng-options="parent.name for parent in listObjTypes" required>
+                <option value="">Выбрать тип</option>
+            </select>
+            <br/>
+        </div>
+
+        <!-- archObject -->
+        <div ng-class="{'has-error' : typeObjForm.archObj.$invalid && typeObjForm.archObj.$touched }">
+            <label>Список объектов</label>
+            <select class="form-control" name="archObj" ng-model="typeObj.archObjects" ng-options="archObj.name for archObj in archObjectList" required>
+                <option value="">Выбрать объект</option>
+            </select>
+            <br/>
+        </div>
+
+        <!-- SUBMIT BUTTON -->
+        <button type="submit" class="btn btn-primary" ng-disabled="typeObjForm.$invalid">Сохранить</button>
+
+    </form>
+</div>
