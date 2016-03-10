@@ -12,24 +12,6 @@
             <br/>
         </div>
 
-        <!-- Parent Type-->
-        <div ng-class="{ 'has-error' : typeObjForm.parent.$invalid && typeObjForm.parent.$touched }">
-            <label>Тип объекта</label>
-            <select class="form-control" name="parent" ng-model="typeObj.parent" ng-options="parent.name for parent in listObjTypes" required>
-                <option value="">Выбрать тип</option>
-            </select>
-            <br/>
-        </div>
-
-        <!-- archObject -->
-        <div ng-class="{'has-error' : typeObjForm.archObj.$invalid && typeObjForm.archObj.$touched }">
-            <label>Список объектов</label>
-            <select class="form-control" name="archObj" ng-model="typeObj.archObjects" ng-options="archObj.name for archObj in archObjectList" required>
-                <option value="">Выбрать объект</option>
-            </select>
-            <br/>
-        </div>
-
         <!-- SUBMIT BUTTON -->
         <button type="submit" class="btn btn-primary" ng-disabled="typeObjForm.$invalid">Сохранить</button>
 
